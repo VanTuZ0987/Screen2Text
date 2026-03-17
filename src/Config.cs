@@ -10,14 +10,6 @@ namespace ScreenshotReader
         
         public static AppConfig Load()
         {
-            string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
-            
-            if (File.Exists(configPath))
-            {
-                string json = File.ReadAllText(configPath);
-                return JsonSerializer.Deserialize<AppConfig>(json) ?? new AppConfig();
-            }
-            
             return new AppConfig 
             { 
                 TessDataPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tessdata")
