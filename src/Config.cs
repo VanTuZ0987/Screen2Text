@@ -6,7 +6,7 @@ namespace ScreenshotReader
 {
     public class AppConfig
     {
-        public string TessDataPath { get; set; }
+        public string TessDataPath { get; private set; }
         
         public static AppConfig Load()
         {
